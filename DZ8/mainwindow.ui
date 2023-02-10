@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1056</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Блокнот</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="0">
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>160</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>160</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Поиск</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="maximumSize">
+       <size>
+        <width>1200</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMaximumSize</enum>
+      </property>
+      <item>
+       <widget class="QSplitter" name="splitter">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <property name="lineWidth">
+         <number>16</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="opaqueResize">
+         <bool>false</bool>
+        </property>
+        <property name="handleWidth">
+         <number>10</number>
+        </property>
+        <property name="childrenCollapsible">
+         <bool>true</bool>
+        </property>
+        <widget class="fileManager" name="widget" native="true">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>180</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="acceptDrops">
+          <bool>true</bool>
+         </property>
+         <property name="toolTipDuration">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEdit">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>190</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QMdiArea" name="mdiArea">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="8" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QListView" name="searchView"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1056</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <widget class="QMenu" name="menu_2">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>Язык</string>
+     </property>
+     <addaction name="russian"/>
+     <addaction name="english"/>
+    </widget>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>Выбрать тему</string>
+     </property>
+     <addaction name="light"/>
+     <addaction name="dark"/>
+    </widget>
+    <addaction name="open_2"/>
+    <addaction name="readOnly"/>
+    <addaction name="separator"/>
+    <addaction name="save"/>
+    <addaction name="printDoc"/>
+    <addaction name="menu_3"/>
+    <addaction name="separator"/>
+    <addaction name="menu_2"/>
+    <addaction name="help"/>
+    <addaction name="separator"/>
+    <addaction name="exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>Текст</string>
+    </property>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>Выравнивание</string>
+     </property>
+     <addaction name="onLeft"/>
+     <addaction name="onCenter"/>
+     <addaction name="onRight"/>
+    </widget>
+    <addaction name="copyFT"/>
+    <addaction name="setFT"/>
+    <addaction name="separator"/>
+    <addaction name="menu_5"/>
+    <addaction name="font"/>
+    <addaction name="separator"/>
+    <addaction name="dateTimeAction"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="save">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="open_2">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="exit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="help">
+   <property name="text">
+    <string>Справка</string>
+   </property>
+  </action>
+  <action name="russian">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Русский</string>
+   </property>
+  </action>
+  <action name="english">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Английский</string>
+   </property>
+  </action>
+  <action name="readOnly">
+   <property name="text">
+    <string>Открыть для чтения</string>
+   </property>
+  </action>
+  <action name="light">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Светлая</string>
+   </property>
+  </action>
+  <action name="dark">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Тёмная</string>
+   </property>
+  </action>
+  <action name="printDoc">
+   <property name="text">
+    <string>Печать</string>
+   </property>
+  </action>
+  <action name="copyFT">
+   <property name="text">
+    <string>Копировать формат</string>
+   </property>
+  </action>
+  <action name="setFT">
+   <property name="text">
+    <string>Применить формат</string>
+   </property>
+  </action>
+  <action name="font">
+   <property name="text">
+    <string>Шрифт</string>
+   </property>
+  </action>
+  <action name="onLeft">
+   <property name="text">
+    <string>Слева</string>
+   </property>
+  </action>
+  <action name="onCenter">
+   <property name="text">
+    <string>Посередине</string>
+   </property>
+  </action>
+  <action name="onRight">
+   <property name="text">
+    <string>Справа</string>
+   </property>
+  </action>
+  <action name="dateTimeAction">
+   <property name="text">
+    <string>Вcтавка времени</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>fileManager</class>
+   <extends>QWidget</extends>
+   <header>filemanager.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
